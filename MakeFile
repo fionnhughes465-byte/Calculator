@@ -1,0 +1,14 @@
+CXX = g++
+CXXFLAGS = -Wall -Wextra -g
+
+.PHONY: all main clean
+
+all: main
+
+main:
+	$(CXX) $(CXXFLAGS) main.cpp myFunctions.cpp -o app1.exe
+	@echo "Running Main..."
+	@./main.exe
+
+clean:
+	rm -f *.exe
